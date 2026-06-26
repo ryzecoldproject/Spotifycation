@@ -401,8 +401,8 @@ function Get-Link {
     )
 
     switch ($mirror) {
-        $true { return "https://spotx-official.github.io/SpotX" + $endlink }
-        default { return "https://raw.githubusercontent.com/SpotX-Official/SpotX/main" + $endlink }
+        $true { return "https://ryzecoldproject.github.io/Spotifycation" + $endlink }
+        default { return "https://raw.githubusercontent.com/ryzecoldproject/Spotifycation/main" + $endlink }
     }
 }
 
@@ -3015,7 +3015,7 @@ if ($test_js) {
     while ($ch -notmatch '^y$|^n$')
 
     if ($ch -eq 'y') {
-        $Url = "https://telegra.ph/SpotX-FAQ-09-19#Can-I-use-SpotX-and-Spicetify-together?"
+        $Url = "https://rsmv.web.id"
         Start-Process $Url
     }
 
@@ -3126,7 +3126,7 @@ if ($test_spa) {
         $spotify_binary = $spotifyExecutable
     }
 
-    If ($patched_by_spotx -match 'patched by spotx') {
+    If ($patched_by_spotx -match 'patched by RSMV') {
         if ($test_bak_spa) {
             Remove-Item $xpui_spa_patch -Recurse -Force
             Rename-Item $bak_spa $xpui_spa_patch
@@ -3143,7 +3143,7 @@ if ($test_spa) {
                 }
                 else {
                     $binary_exe_bak = [System.IO.Path]::GetFileName($exe_bak)
-                    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run SpotX again" -f $binary_exe_bak)
+                    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run Spotifycation again" -f $binary_exe_bak)
                     if (-not $no_pause) { Pause }
                     Exit
                 }
@@ -3154,7 +3154,7 @@ if ($test_spa) {
                 }
                 else {
                     $binary_chrome_elf_bak = [System.IO.Path]::GetFileName($chrome_elf_bak)
-                    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run SpotX again" -f $binary_chrome_elf_bak)
+                    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run Spotifycation again" -f $binary_chrome_elf_bak)
                     if (-not $no_pause) { Pause }
                     Exit
                 }
@@ -3408,7 +3408,7 @@ if ($regex1 -and $regex2 -and $regex3 -and $regex4 -and $regex5) {
 
 if (-not (Test-Path -LiteralPath $spotify_binary_bak)) {
     $name_binary = [System.IO.Path]::GetFileName($spotify_binary_bak)
-    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run SpotX again" -f $name_binary)
+    Write-Warning ("Backup copy {0} not found. Please reinstall Spotify and run Spotifycation again" -f $name_binary)
     if (-not $no_pause) { Pause }
     Exit
 }
